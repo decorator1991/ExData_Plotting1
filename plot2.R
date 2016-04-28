@@ -24,6 +24,6 @@ data$Datetime <- data$Date+data$Time
 
 #5) Plot a graph of interest
 png("plot2.png",width=480,height=480)
-with(data,plot(Datetime,Global_active_power,ylab="Global Active Power (kilowatts)",type="n"))
+with(data,plot(Datetime,Global_active_power,xlab="",ylab="Global Active Power (kilowatts)",type="n"))
 with(data,lines(Datetime,Global_active_power,lwd=1.5))
 dev.off()

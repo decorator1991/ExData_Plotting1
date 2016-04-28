@@ -28,18 +28,18 @@ data$Datetime <- data$Date+data$Time
 #5) Plot a graph of interest
 png("plot4.png",width=480,height=480)
 par(mfrow=c(2,2))
-with(data,plot(Datetime,Global_active_power,ylab="Global Active Power",type="n"))
+with(data,plot(Datetime,Global_active_power,xlab="",ylab="Global Active Power",type="n"))
 with(data,lines(Datetime,Global_active_power,lwd=1.5))
 
 with(data,plot(Datetime,Voltage,xlab="datetime",ylab="Voltage",type="n"))
-with(data,lines(Datetime,Voltage,lwd=1))
+with(data,lines(Datetime,Voltage,lwd=1.5))
 
-with(data,plot(Datetime,Sub_metering_1,ylab="Energy sub metering",type="n"))
+with(data,plot(Datetime,Sub_metering_1,xlab="",ylab="Energy sub metering",type="n"))
 with(data,lines(Datetime,Sub_metering_1,lwd=1.5))
 with(data,lines(Datetime,Sub_metering_2,lwd=1.5,col="red"))
 with(data,lines(Datetime,Sub_metering_3,lwd=1.5,col="blue"))
 legend("topright",lty=c(1,1),col=c("black","red","blue"),legend=colnames(data)[7:9],bty="n")
 
 with(data,plot(Datetime,Global_reactive_power,xlab="datetime",ylab="Global_reactive_power",type="n"))
-with(data,lines(Datetime,Global_reactive_power,lwd=1))
+with(data,lines(Datetime,Global_reactive_power,lwd=1.5))
 dev.off()
